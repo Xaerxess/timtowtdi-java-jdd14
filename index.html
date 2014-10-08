@@ -1,394 +1,824 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>TIMTOWTDI and Java</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="Prezentacja na JavaCamp #12">
+    <meta name="author" content="Grzegorz Rożniecki (Xaerxess)">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
-    }
-  }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section id="start">
+
+          <section>
+            <h1><strong>TIMTOWTDI and Java</strong></h1>
+            <h2 class="fragment">(and not only Java!)</h2>
+            <p>Grzegorz Rożniecki (<a href="https://twitter.com/xaerxess">@xaerxess</a>)</p>
+          </section>
+
+          <section id="about_me" data-transition="none">
+            <h2>About me</h2>
+            <p>Java / <span class="fragment highlight-red" data-fragment-index="2">Perl</span> / JavaScript developer</p>
+            <p class="fragment" data-fragment-index="1">Software <span class="fragment highlight-red" data-fragment-index="2">reader</span> / writer</p>
+            <p><i class="fa fa-home"></i> <a href="http://xaerxess.pl">xaerxess.pl</a></p>
+            <p><i class="fa fa-twitter"></i> <a href="https://twitter.com/xaerxess">@xaerxess</a></p>
+            <p><i class="fa fa-github"></i> <a href="https://github.com/Xaerxess">Xaerxess</a></p>
+            <aside class="notes" data-markdown>
+              - Will this talk be about programming languages? Not really.
+                - Java (obviously)
+                - JavaScript (only good parts)
+                - Perl (FTW!)
+                - also: Python (and TIMTOWTDI?)
+                - also: PHP (...)
+              - A bit about good practices and how treat experience from other languages.
+              - Something about good design (**IMO**).
+            </aside>
+          </section>
+
+          <section id="about_talk">
+            <h2>About this talk</h2>
+            <p><a href="http://xaerxess.pl/timtowtdi-java-jdd14">Slides</a> | <a href="https://github.com/Xaerxess/timtowtdi-java-jdd14">Source on GitHub</a></p>
+            <img src="images/qrcode.png">
+            <small>
+              <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </small>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="timtowtdi">
+            <h1><strong>TIMTOWTDI</strong></h1>
+            <p class="fragment">There is more than one way to do it</p>
+            <p class="fragment"><em>Tim Toady</em></p>
+            <aside class="notes" data-markdown>
+              - Tim Toady - Larry Wall
+            </aside>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/programming_perl_timtowtdi.jpg" alt="Programming Perl">
+          </section>
+
+          <section data-transition="none">
+            <img src="images/programming_perl.png" alt="Programming Perl">
+          </section>
+
+          <section data-transition="none">
+            <img src="images/timtowtdi.png" alt="Programming Perl TIMTOWTDI">
+            <aside class="notes" data-markdown>
+              - TIMTOWTDI == mess?
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="tim_toady_why">
+            <blockquote>
+              &quot;The very fact that <strong>it's possible to write messy programs in Perl</strong> is also what makes it possible to write programs that are cleaner in Perl than they could ever be in a language that attempts to enforce cleanliness. <strong>The potential for greater good goes right along with the potential for greater evil.</strong>&quot;
+              <footer>- <cite>Larry Wall, Perl creator</cite></footer>
+            </blockquote>
+            <aside class="notes" data-markdown>
+              - quite opposite in Java
+            </aside>
+          </section>
+
+          <section>
+            <h1>Why?</h1>
+          </section>
+
+          <section id="python_zen">
+            <h2>Python Zen</h2>
+            <p>
+              <em>There should be one<br>
+                - and preferably only one - <br>
+                obvious way to do it
+              </em>
+            </p>
+            <aside class="notes" data-markdown>
+              - No shortcut for that and no fancy pronounciation - that'll be another way to say the phrase!
+              - vs Perl?
+            </aside>
+          </section>
+
+          <section>
+            <img src="images/flexible_cat.jpg" alt="Flexible cat">
+          </section>
+
+          <section>
+            <img src="images/power.jpg" alt="Jeremy: Powaaah!">
+          </section>
+
+          <section data-transition="none">
+            <h2>Tim Toady in practice</h2>
+            <em class="fragment">What's goalkeeper for?</em>
+            <img class="fragment" src="images/neuer.jpg" alt="World Cup 2014 - Michael Neuer">
+          </section>
+
+          <section data-transition="none">
+            <h2>Tim Toady in practice</h2>
+            <em>What's goalkeeper for?</em>
+            <img src="images/fred_vs_neuer.png" alt="World Cup 2014 - Michael Neuer">
+            <aside class="notes" data-markdown>
+              - Coach orders
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="bjarne" data-transition="none">
+            <blockquote>
+              "There are only two kinds of languages: the ones people complain about and the ones nobody uses"
+              <footer>- <cite>Bjarne Stroustrup, C++ creator</cite></footer>
+            </blockquote>
+          </section>
+
+          <section data-transition="none">
+            <blockquote>
+              "There are only <code>10</code> kinds of languages: the ones people complain about and the ones nobody uses"
+              <footer>- <cite>Bjarne Stroustrup, C++ creator</cite></footer>
+            </blockquote>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/binary.jpg" alt="Programming joke fail">
+            <aside class="notes" data-markdown>
+              - camel -&gt; back to Perl
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="perl" data-transition="none">
+            <h2>Perl doing <code>for</code> loop</h2>
+            <pre><code data-trim contenteditable>
+for (my $i = 0; $i <= 3; ++$i) {
+    print $i;
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+            </code></pre>
+            <aside class="notes" data-markdown>
+              - Larry Wall -> linguist
+            </aside>
+          </section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+          <section data-transition="none">
+            <h2>Perl doing <code>for</code> loop</h2>
+            <pre><code data-trim contenteditable>
+for my $i (0..3) {
+    print $i;
+}
+            </code></pre>
+          </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+          <section data-transition="none">
+            <h2>Perl doing <code>for</code> loop</h2>
+            <pre><code data-trim contenteditable>
+for (0..3) {
+    print $_;
+}
+            </code></pre>
+          </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+          <section data-transition="none">
+            <h2>Perl doing <code>for</code> loop</h2>
+            <pre><code data-trim contenteditable>
+for (0..3) {
+    print;
+}
+            </code></pre>
+          </section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+          <section data-transition="none">
+            <h2>Perl doing <code>for</code> loop</h2>
+            <pre><code data-trim contenteditable>
+print for (0..3);
+            </code></pre>
+            <aside class="notes" data-markdown>
+              - Larry Wall -> linguist
+            </aside>
+          </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+          <!-- <section> -->
+          <!--   <a href="https://metacpan.org/pod/distribution/perlsecret/lib/perlsecret.pod">Perl secret operators - <i>perlsecret</i></a> -->
+          <!-- </section> -->
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+        </section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+        <section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+          <section id="linguistic_relativity">
+            <h2>Linguistic relativity</h2>
+            <p class="fragment" data-fragment-index="1">vs</p>
+            <h2 class="fragment" data-fragment-index="1">Universal grammar</h2>
+            <aside class="notes" data-markdown>
+              - **universal grammar hypothesis** says that the underlying structure of the human **brain determines (or at least constrains) the human capacity for language**, which is why all languages share a set of characteristics that are true of all languages (language aquisition device)
+              - **linguistic relativity** suggests that **language itself limits (or at least influences) the ways in which language speakers conceptualize their world** and this affects their cognitive processes
+                - Strong: language **determines** thought and linguistic categories limit and determine cognitive categories
+                - Weak: linguistic categories and usage **influence** thought and behavior, both linguistic and non-linguistic
+              - http://gallivananth1102.blogspot.com/2014/02/universal-grammar-or-linguistic.html
+            </aside>
+          </section>
 
-			</div>
+          <section id="sapir_whorf_hypothesis">
+            <h2>Sapir–Whorf hypothesis</h2>
+            <table class="fragment">
+              <tr>
+                <td>
+                  Edward Sapir
+                </td>
+                <td>
+                  Benjamin Whorf
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="images/sapir.jpg" alt="Edward Sapir">
+                </td>
+                <td>
+                  <img src="images/whorf.jpg" alt="Benjamin Lee Whorf">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  linguistics theory
+                </td>
+                <td>
+                  Hopi - time & space
+                </td>
+              </tr>
+            </table>
+            <aside class="notes" data-markdown>
+              - Edward Sapir - cognitive science basics (theory)
+              - Benjamin Lee Whorf - research
+            </aside>
+          </section>
 
-		</div>
+          <section id="cognitive_linguistics">
+            <img src="images/language_relativity.jpg" alt="Congnitive linguistics">
+          </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        </section>
 
-		<script>
+        <section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+          <section id="perl_vs_java">
+            <table class="table-compare">
+              <thead>
+                <tr>
+                  <th>
+                    Perl
+                  </th>
+                  <th>
+                    Java
+                  </th>
+                </tr>
+              </thead>
+              <tr class="fragment">
+                <td>
+                  created in 1987
+                </td>
+                <td>
+                  created in 1991
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>
+                  Perl 5 released in 1994
+                </td>
+                <td>
+                  JDK 1.0 released in 1995
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>
+                  &quot;get things done&quot;
+                </td>
+                <td>
+                  &quot;write once, run anywhere&quot;
+                </td>
+              </tr>
+              <tr class="fragment">
+                <td>
+                  OO support in Perl 5
+                </td>
+                <td>
+                  OO support from the beginning
+                </td>
+              </tr>
+            </table>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+          <!-- Python? JS? -->
+          </section>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+        </section>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        <section>
 
-		</script>
+          <section id="consistency">
+            <h2>TIMTOWTDI</h2>
+            <h2><strong>BSCINABTE</strong></h2>
+            <p class="fragment">There’s more than one way to do it<br>
+              <strong>but sometimes consistency is not a bad thing either</strong></p>
+            <div class="fragment">
+              <h2>Tim Toady</h2>
+              <h2><strong>Bicarbonate</strong></h2>
+            </div>
+          </section>
 
-	</body>
+          <section id="perl_oop">
+            <h2>OOP in Perl</h2>
+            <pre><code data-trim contenteditable>
+package Foo;
+
+sub new {
+  my $class = shift;
+  my $self = { }; # or [ ] or any arbitrary scalar value
+  return bless $self, $class;
+}
+
+1;
+            </code></pre>
+            <aside class="notes" data-markdown>
+              - Perl community lesson: consistency
+            </aside>
+          </section>
+
+          <section id="perl_oop_wat">
+            <img src="images/perl_oop_wat.jpg" alt="OOP in Perl - WAT">
+          </section>
+
+          <section id="perl_oop_moose">
+            <a class="image" href="http://p3rl.org/Moose" target="_blank"><img class="image-with-alfa" src="images/perl_oop_moose.jpg" alt="OOP in Perl - Moose"></a>
+          </section>
+
+          <!--
+          <section id="consistency_perl">
+            <p>
+              <a class="image" href="http://search.cpan.org/" target="_blank"><img class="image-with-alfa" src="images/search_cpan.png" alt="CPAN Search"></a>
+            </p>
+            vs
+            <p>
+              <a class="image" href="https://metacpan.org/" target="_blank"><img class="image-with-alfa" src="images/meta_cpan.png" alt="MetaCPAN"></a>
+            </p>
+            <aside class="notes" data-markdown>
+              - Perl community lesson: consistency
+            </aside>
+          </section>
+          -->
+
+        </section>
+
+        <section>
+
+          <section id="standards">
+            <h1>Standards</h1>
+            <blockquote class="fragment">
+              People like rules and guidelines. They like to agree with them, or to argue with them.
+              <!-- <footer class="fragment">- <cite>Grzegorz Rożniecki, for purpose of this talk</cite></footer> -->
+            </blockquote>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/tabs_spaces_both.png" alt="Tabs vs Spaces">
+            <aside class="notes" data-markdown>
+              - http://programmers.stackexchange.com/questions/157277/indentation-is-there-any-evidence-to-show-whether-2-or-4-spaces-is-more-readabl
+              - http://webcache.googleusercontent.com/search?q=cache:P5afiEgnEKwJ:www.cl.cam.ac.uk/teaching/1314/P201/ppig-book/ch1-5.pdf+&cd=5&hl=en&ct=clnk&gl=pl
+              - http://blog.codinghorror.com/death-to-the-space-infidels/
+            </aside>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/emacs_vim_atom.png" alt="Emacs vs Vim">
+          </section>
+
+          <section>
+            <p><s>Inconsistency</s></p>
+            <img src="images/inconsistency.jpg" alt="Inconsistency">
+            <p class="fragment"><s>TIMTOWTDI?</s></p>
+          </section>
+
+        </section>
+
+        <section id="java">
+          <h2>Java and TIMTOWTDI</h2>
+          <p class="fragment current-visible"><small>finally...</small></p>
+          <ul>
+            <li class="fragment">simple syntax</li>
+            <li class="fragment">stable and battle tested</li>
+            <li class="fragment">JVM</li>
+            <li class="fragment">has <strong>coding standards</strong></li>
+            <li class="fragment">has <strong>best practices</strong></li>
+          </ul>
+          <p class="fragment"><i>but...</i></p>
+          <ul>
+            <li class="fragment">verbose syntax</li>
+            <li class="fragment">backwards compatibility</li>
+            <li class="fragment">JVM languages are not Java</li>
+            <li class="fragment">has <strong>many</strong> coding standards</li>
+            <li class="fragment">has <strong>some</strong> best practices</li>
+          </ul>
+
+        </section>
+
+        <section>
+
+          <section id="java_syntax">
+            <h1>Java syntax</h1>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+final class Person {
+
+  private final String name;
+  private final Integer age;
+
+  public Person(String name, Integer age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Integer getAge() {
+    return age;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((age == null) ? 0 : age.hashCode());
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Person other = (Person) obj;
+    if (age == null) {
+      if (other.age != null)
+        return false;
+    } else if (!age.equals(other.age))
+      return false;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+
+  @Override
+  public String toString() {
+    return "Person [name=" + name + ", age=" + age + "]";
+  }
+
+}
+            </code></pre>
+            vs
+            <pre><code data-trim>
+case class Person(name: String, age: Int)
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Java 7+: <code>Objects</code><br>
+              Java &lt; 7 - Guava: <code>Objects</code></p>
+            <pre><code>
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, age);
+  }
+
+  @Override
+  public boolean equals(final Object obj) {
+    if (!(obj instanceof Person))
+      return false;
+    final Person other = (Person) obj;
+    return Objects.equals(this.name, other.name)
+        && Objects.equals(this.age, other.age);
+  }
+            </code></pre>
+            <p class="fragment">Better?</p>
+          </section>
+
+          <section>
+            <p>Guava 18+: <code>MoreObjects.toStringHelper</code><br>
+              Guava &lt; 18: <code>Objects.toStringHelper</code></p>
+            <pre><code class="java">
+  @Override
+  public String toString() {
+    return MoreObjects.toStringHelper(this)
+        .add("name", name)
+        .add("age", age)
+        .toString();
+  }
+            </code></pre>
+            <p class="fragment" data-fragment-index="1">Also better?</p>
+            <pre class="fragment" data-fragment-index="1"><code class="java">
+  @Override
+  public String toString() {
+    return "Person [name=" + name + ", age=" + age + "]";
+  }
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Lombok: <a href="http://projectlombok.org/features/Value.html"><code>@Value</code></a></p>
+            <pre><code class="java">
+@Value public class Person {
+  String name;
+  Integer age;
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <p class="fragment"><s>Lombok: black magic</s></p>
+            <img src="images/voodoo.jpg" alt="Black magic">
+          </section>
+
+          <section>
+            <p>Google AutoValue: <a href="https://github.com/google/auto/blob/master/value/README.md"><code>@AutoValue</code></a></p>
+            <pre><code class="java">
+@AutoValue
+abstract class Person {
+
+  public static Person create(String name, Integer age) {
+    return new AutoValue_Person(name, age);
+  }
+
+  public abstract String getName();
+  public abstract int getAge();
+}
+            </code></pre>
+            <p class="fragment">Good trade-off?</p>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="java_legacy">
+            <h1>Legacy</h1>
+            <aside class="notes" data-markdown>
+              - Every language has some legacy code, API, etc.
+            </aside>
+          </section>
+
+          <section class="a-bit-smaller">
+            <p>
+              <em>You should prefer <code>List&lt;Foo&gt;</code> over <code>Foo[]</code> whenever possible.</em>
+              <ul>
+                <li>A collection can be mutable or immutable. A nonempty array must always be mutable.</li>
+                <li>A collection can be thread-safe; even concurrent. An array is never safe to publish to multiple threads.</li>
+                <li>A collection can allow or disallow null elements. An array must always permit null elements.</li>
+                <li>A collection is type-safe; an array is not. Because arrays &quot;fake&quot; covariance, <code>ArrayStoreException</code> can result at runtime.</li>
+                <li>A collection can hold a non-reifiable type (e.g. <code>List&lt;Class&lt;? extends E&gt;&gt;</code> or <code>List&lt;Optional&lt;T&gt;&gt;</code>). With an array you get compilation warnings and confusing runtime exceptions.</li>
+                <li>A collection has a fully fleshed-out API; an array has only set-at-index, get-at-index and length.</li>
+                <li>A collection can have views (unmodifiable, subList, filter...). No such luck for an array.</li>
+                <li>A list or set's <code>equals</code>, <code>hashCode</code> and <code>toString</code> methods do what users expect; those methods on an array do anything but what you expect -- a common source of bugs.</li>
+                <li>Because of all the reasons above, third-party libraries like Guava won't bother adding much additional support for arrays, focusing only on collections, so there is a network effect.</li>
+              </ul>
+              <footer>- <cite>Kevin Bourrillion, lead Guava developer <a href="http://stackoverflow.com/a/6105705/708434">on StackOverflow</a></cite></footer>
+            </p>
+          </section>
+
+          <section>
+            <p>So, why would you ever use object arrays?</p>
+            <ul>
+              <li>have to interact with an API that uses them, and you can't fix that API</li>
+              <ul><li>convert to/from a List as close to that API as you can</li></ul>
+              <li>have a reliable benchmark that shows you're actually getting better performance with them</li>
+              <ul><li>benchmarks can lie, and often do</li></ul>
+              <li>can't think of any other reasons</li>
+            </ul>
+            <footer>- <cite>Kevin Bourrillion, <a href="http://stackoverflow.com/a/6105705/708434">also there</a></cite></footer>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="jvm">
+            <h1>JVM languages</h1>
+          </section>
+
+          <section>
+              <ul>
+                <li class="fragment">JVM is great!</li>
+                <li class="fragment">Scala, Clojure, Jython, JRuby</li>
+                <li class="fragment">...but employers don't trust them...</li>
+                <li class="fragment">...and there's big need for Java devs, not JVM-based devs</li>
+                <li class="fragment">:-(</li>
+              </ul>
+            <aside class="notes" data-markdown>
+              - Searching for the holy grail?
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="coding_standards">
+            <h1>Coding standards</h1>
+          </section>
+
+          <section>
+            Be consistent in your team.
+            <ul>
+              <li class="fragment"><a href="https://google-styleguide.googlecode.com/svn/trunk/javaguide.html">Google Java code conventions</a></li>
+              <li class="fragment"><a href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html"><s>Sun</s> Oracle Java code conventions</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <p>Ex. consistent IDE preferences</p>
+            <p class="fragment">The &quot;<code>final</code>&quot; battle</p>
+            <img class="fragment" src="images/final_battle.jpg" alt="Final battle">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="best_practices">
+            <h1>Best practices</h1>
+          </section>
+
+          <section data-markdown>
+            - Always override hashCode when you override equals
+            - Minimize mutability
+            - Design and document for inheritance or else prohibit it
+            - Prefer lists to arrays
+            - Know and use the libraries
+
+            _Sounds familiar?_ <!-- .element: class="fragment" -->
+          </section>
+
+          <section>
+            <img src="images/effective_java.jpg" alt="Effective Java">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="lambdas">
+            <h1>Lambdas</h1>
+          </section>
+
+          <section>
+            <blockquote>
+              &quot;Closures feel to me like one of these design Black Holes. (...) So, should we just give in to the force of gravity and go the rest of the way? The debate's afoot. <span class="fragment roll-in">It's going to be an entertaining year.&quot;</span>
+              <footer>- <cite>James Gosling, Java creator - in 2006, on <a href="https://blogs.oracle.com/jag/entry/the_black_hole_theory_of">his blog</a></cite></footer>
+            </blockquote>
+          </section>
+
+          <section>
+            <blockquote>
+              &quot;Java has closures, it's just called 'anonymous inner classes' (...). [They] are the better and more 'java-way' to do closures. <span class="fragment highlight-red">Adding an additional syntax for closures will only make the language more complex</span> without solving even one real problem.&quot;
+              <footer>- <cite>Karsten Wagner - in 2006, <a href="http://lambda-the-ultimate.org/node/1684#comment-20528">commenting Java closures proposal</a></cite></footer>
+            </blockquote>
+          </section>
+
+          <section>
+            <p>...and in 2014 (finally) instead of this:</p>
+            <pre><code data-trim>
+List&lt;Album&gt; favs = new ArrayList&lt;&gt;();
+for (Album a : albums) {
+    boolean hasFavorite = false;
+    for (Track t : a.tracks) {
+        if (t.rating &gt;= 4) {
+            hasFavorite = true;
+            break;
+        }
+    }
+    if (hasFavorite) {
+        favs.add(a);
+    }
+}
+Collections.sort(favs, new Comparator&lt;Album&gt;() {
+    @Override public int compare(Album a1, Album a2) {
+        return a1.name.compareTo(a2.name);
+}});
+            </code></pre>
+          </section>
+
+          <section>
+            <p>...you can do this:</p>
+            <pre><code data-trim>
+List&lt;Album&gt; sortedFavs =
+  albums.stream()
+        .filter(a -&gt; a.tracks.anyMatch(t -&gt; (t.rating &gt;= 4)))
+        .sorted(Comparator.comparing(a -&gt; a.name))
+        .collect(Collectors.toList());
+            </code></pre>
+            <p class="fragment">There is more than one way to do it, finally!</p>
+          </section>
+
+          <section>
+            <img src="images/lambdas_everywhere.jpg" alt="Lambdas">
+          </section>
+
+        </section>
+
+        <section id="the_end">
+          <h1 class="fragment" data-fragment-index="1">THE END</h1>
+          <h3>Questions?</h3>
+          <p class="fragment" data-fragment-index="1">Please send me a feedback:<br>
+            <a href="https://twitter.com/xaerxess">@xaerxess</a> or xaerxess <code>at</code> gmail <code>dot</code> com</p>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
 </html>
